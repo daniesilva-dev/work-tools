@@ -15,6 +15,7 @@
 
  .container-body {
     display: flex;
+    flex-direction: column;
  }
 
  .container-prosser {
@@ -24,10 +25,23 @@
     margin-right: 2.5rem;
  }
 
+label{
+   display: block;
+ }
+ .name-title {
+   margin-bottom: 2rem;
+ }
+ .tiutlo-text {
+   width: 500px;
+   border: 1px solid #ccc;
+ }
+
+
  .container-copy {
     display: block;
     flex-direction: column;
  }
+
 
  button {
     border: none;

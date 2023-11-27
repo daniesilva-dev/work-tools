@@ -1,7 +1,9 @@
 // Capturando os elementos
 let inputText = document.getElementById('inputText');
+let outputText = document.getElementById('outputText');
 let processar = document.getElementById('process');
 let clearContent2 = document.getElementById('clearContent');
+let clearContentOutputText = document.getElementById('clearContentOutputText');
 let negrito = document.getElementById('negrito');
 let contador = document.getElementById('contador');
 
@@ -29,19 +31,29 @@ function removeSpacesAndLineBreaks() {
   processedText = processedText.replace(/Processo para Sublimação/g, '<strong>Processo para Sublimação</strong>');
 
 
-
-
   document.getElementById('outputText').innerHTML = processedText;
 }
+
 
 // Evento para o botão limpar
 clearContent2.addEventListener('click', function() {
   clearContent();
 });
-
 // Função para limpar conteúdo
 function clearContent() {
-  inputText.innerHTML = '';
-  document.getElementById('outputText').innerHTML = '';
+  inputText.value = '';
+  outputText.innerHTML = '';
   contador.textContent = "0";
 }
+
+// Limpar conteudo de output
+clearContentOutputText.addEventListener('click', function() {
+  clearContentCopy();
+});
+function clearContentCopy() {
+  outputText.innerHTML = '';
+}
+
+
+
+
