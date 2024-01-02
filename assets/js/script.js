@@ -6,11 +6,13 @@ let clearContent2 = document.getElementById('clearContent');
 let clearContentOutputText = document.getElementById('clearContentOutputText');
 let negrito = document.getElementById('negrito');
 let contador = document.getElementById('contador');
+let styledText = document.getElementById('styledText');
 
 // Evento para o botão processar
 processar.addEventListener('click', function() {
   removeSpacesAndLineBreaks();
 });
+
 
 // Função para processar o texto
 function removeSpacesAndLineBreaks() {
@@ -30,10 +32,18 @@ function removeSpacesAndLineBreaks() {
   // Substituir "Processo para Sublimação"
   processedText = processedText.replace(/Processo para Sublimação/g, '<strong>Processo para Sublimação</strong>');
 
-
+  //Imprimir na tela
   document.getElementById('outputText').innerHTML = processedText;
+  document.getElementById('styledText').innerHTML = processedText;
 }
 
+//Copiar conteudo
+function copyToClipboard() {
+  let outputTextCopy = document.getElementById('outputText');
+  outputTextCopy.select();
+  navigator.clipboard.writeText(outputTextCopy.value);
+
+}
 
 // Evento para o botão limpar
 clearContent2.addEventListener('click', function() {
