@@ -30,7 +30,7 @@ function removeSpacesAndLineBreaks() {
   contador.textContent = contagem;
 
   // Substituir "Processo para Sublimação"
-  processedText = processedText.replace(/Processo para Sublimação/g, '<strong>Processo para Sublimação</strong>');
+  processedText = processedText.replace(/Processo para Sublimação/g, '<strong style="line-height: 30px; !important;">Processo para Sublimação</strong>');
 
   //Imprimir na tela
   document.getElementById('outputText').innerHTML = processedText;
@@ -63,7 +63,3 @@ clearContentOutputText.addEventListener('click', function() {
 function clearContentCopy() {
   outputText.innerHTML = '';
 }
-
-
-
-

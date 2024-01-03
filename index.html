@@ -8,27 +8,44 @@
 </head>
 <body>
     <div class="container-body">
-        <div class="container-prosser">
-            <textarea id="inputText" cols="33" rows="100"></textarea> <!--Processo de Sublimação-->
-            <div class="buttons-progress">
-                <button id="process">Processar</button>
-                <button id="clearContent">Limpar</button>
-                <span id="contador">0</span>
+        <div id="menu" class="menu-left">
+            <ul>
+                <li>..</li>
+                <li>..</li>
+                <li>..</li>
+                <li>..</li>
+                <li>..</li>
+            </ul>
+        </div>
+        <div class="container">
+            <div class="container-prosser">
+                <div class="container-prosser-1">
+                    <h2>Descrição</h2>
+                    <div class="contetent-comprimir">
+                    <textarea id="inputText" cols="33" rows="100"></textarea> <!--Processo de Sublimação-->
+                    
+                    </div>
+                    <div class="buttons-progress">
+                        <button  id="process">Processar</button>
+                        <button id="clearContent">Limpar</button>
+                        <span id="contador">0</span>
+                    </div>
+                </div>
+                <div class="container-prosser-2">
+                    <!--<div id="outputText"></div>-->
+                    <h2>Descrição em HTML</h2>
+                    <textarea id="outputText" cols="33" rows="100"></textarea>
+                    <div class="buttons-copy">
+                        <button id="btCopy" onclick="copyToClipboard()">Copiar</button>
+                        <button id="clearContentOutputText">Limpar</button>
+                        <!--<button id="addPS">Processo de Sublimação</button>-->
+                    </div>
+                </div>
             </div>
-            <div>
+            <div class="container-copy">
+                <div id="styledText" class="styled-text"></div>
             </div>
         </div>
-        <div class="container-copy">
-            <!--<div id="outputText"></div>-->
-            <textarea id="outputText" cols="33" rows="100"></textarea>
-            <div class="buttons-copy">
-                <button id="btCopy" onclick="copyToClipboard()">Copiar</button>
-                <button id="clearContentOutputText">Limpar</button>
-                <div id="styledText"></div>
-                <!--<button id="addPS">Processo de Sublimação</button>-->
-            </div>
-        </div>
-        
     </div>
 
 
